@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // Drive JDBC que sera utilizado pelos frameworks que implementam o JPA
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+
+
+    // Implementacao Hibernate
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.5.7.Final'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
