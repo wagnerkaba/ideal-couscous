@@ -6,7 +6,7 @@
 
 
 
-    <persistence-unit name="persistencia">
+    <persistence-unit name="persistente">
 
         <description> Unidade de persistencia JPA + (Hibernate ou EclipseLink) </description>
 
